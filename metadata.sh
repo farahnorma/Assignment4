@@ -2,10 +2,10 @@
 
 function create_file() {
 touch rds-message.txt
-nc -vz ecotech-db1.czflndyb3zpc.us-east-1.rds.amazonaws.com 3306>>rds-message.txt
+nc -vz ecotech-db1.czflndyb3zpc.us-east-1.rds.amazonaws.com 3306 &>rds-message.txt
 
 touch ecoweb1-identity.json
-curl -w "\n" http://169.254.169.254/latest/dynamic/instance-identity/document/>$
+curl -w "\n" http://169.254.169.254/latest/dynamic/instance-identity/document/>>ecoweb1-identity.json
 }
 
 
